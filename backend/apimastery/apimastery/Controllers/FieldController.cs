@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using apimastery.Models;
+using apimastery.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -11,36 +13,49 @@ namespace apimastery.Controllers
     [ApiController]
     public class FieldController : ControllerBase
     {
-        // GET api/values
+        private IRepository<Field> fieldRepo;
+
+        public FieldController(IRepository<Field> fieldRepo)
+        {
+            this.fieldRepo = fieldRepo;
+        }
+        // GET api/Field
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public IEnumerable<Field> Get()
         {
-            return new string[] { "value1", "value2" };
+            return fieldRepo.GetAll();
         }
 
-        // GET api/values/5
+        // GET api/Field/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public Field Get(int id)
         {
-            return "value";
+            return fieldRepo.GetById(id);
         }
 
-        // POST api/values
+        // POST api/Field
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IEnumerable<Field> Post([FromBody] Field field)
         {
+            fieldRepo.Create(field);
+            return fieldRepo.GetAll();
         }
 
-        // PUT api/values/5
+        // PUT api/Field/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IEnumerable<Field> Put([FromBody] Field field)
         {
+            fieldRepo.Update(field);
+            return fieldRepo.GetAll();
         }
 
-        // DELETE api/values/5
+        // DELETE api/ApiWithAction/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IEnumerable<Field> Delete(int id)
         {
+            var deleteField = fieldRepo.GetById(id);
+            fieldRepo.Delete(deleteField);
+            return fieldRepo.GetAll();
         }
     }
 }

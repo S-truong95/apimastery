@@ -37,20 +37,25 @@ namespace apimastery.Controllers
         [HttpPost]
         public IEnumerable<Scientist> Post([FromBody] Scientist scientist)
         {
-            scientist.Create(scientist);
+            scientistRepo.Create(scientist);
             return scientistRepo.GetAll();
         }
 
-        // PUT api/values/5
+        // PUT api/Scientist/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IEnumerable<Scientist> Put([FromBody] Scientist scientist)
         {
+            scientistRepo.Update(scientist);
+            return scientistRepo.GetAll();
         }
 
-        // DELETE api/values/5
+        // DELETE api/ApiWithAction/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IEnumerable<Scientist> Delete(int id)
         {
+            var deleteScientist = scientistRepo.GetById(id);
+            scientistRepo.Delete(deleteScientist);
+            return scientistRepo.GetAll();
         }
     }
 }
