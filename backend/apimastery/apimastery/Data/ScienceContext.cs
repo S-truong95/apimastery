@@ -94,6 +94,67 @@ namespace apimastery.Data
 
             modelBuilder.Entity<Scientist>().HasData(
 
+                new Scientist()
+                {
+                    Id = 1,
+                    Name = "Gregor Mendel",
+                    Age = 62,
+                    Birthplace = "Austria",
+                    Contribution = "Creating the science of Genetics",
+                    FieldId = 1
+                },
+
+                new Scientist()
+                {
+                    Id = 2,
+                    Name = "Charles Darwin",
+                    Age = 73,
+                    Birthplace = "England",
+                    Contribution = "On the Origin of Species",
+                    FieldId = 2
+                },
+
+                new Scientist()
+                {
+                    Id = 3,
+                    Name = "Michael Faraday",
+                    Age = 75,
+                    Birthplace = "England",
+                    Contribution = "Faraday's Law of Induction",
+                    FieldId = 3
+                },
+
+                new Scientist()
+                {
+                    Id = 4,
+                    Name = "Albert Einstein",
+                    Age = 76,
+                    Birthplace = "Germany",
+                    Contribution = "General relativity",
+                    FieldId = 4                
+                },
+
+                new Scientist()
+                {
+                    Id = 5,
+                    Name = "Robert Burns Woodward",
+                    Age = 62,
+                    Birthplace = "USA",
+                    Contribution = "Molecular Structure determination",
+                    FieldId = 5              
+               
+                },
+
+                new Scientist()
+                {
+                    Id = 6,
+                    Name = "Richard Robert Ernst",
+                    Age = 86,
+                    Birthplace = "Switzerland",
+                    Contribution = "NMR Spectroscopy",
+                    FieldId = 6
+                }
+
                 );
 
 
