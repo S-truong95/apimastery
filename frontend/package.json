@@ -8,7 +8,6 @@
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
   },
-
   "scripts": {
     "start": "webpack-dev-server --mode development --content-base docs/ --open --hot"
   }
