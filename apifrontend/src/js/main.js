@@ -4,6 +4,7 @@ import SideNav from "./components/SideNav"
 import Scientists from "./components/Scientists"
 import Subjects from "./components/Subjects"
 import Fields from "./components/Fields"
+import apiActions from "./api/apiActions"
 
 export default () => {
     pageBuild();
@@ -37,7 +38,7 @@ function subjectNav(){
     const subjectButton = document.querySelector(".subjects");
     
     subjectButton.addEventListener("click", function(){
-        apiAction.getRequest("https://localhost:44330/api/subject", subjects => {
+        apiActions.getRequest("https://localhost:44330/api/subject", subjects => {
             document.querySelector("#app").innerHTML = Subjects(subjects);
         });
     });
@@ -47,7 +48,7 @@ function fieldNav(){
     const fieldButton = document.querySelector(".fields");
     
     fieldButton.addEventListener("click", function(){
-        apiAction.getRequest("https://localhost:44330/api/field", fields => {
+        apiActions.getRequest("https://localhost:44330/api/field", fields => {
             document.querySelector("#app").innerHTML = Fields(fields);
         });
     });
@@ -58,7 +59,7 @@ function scientistNav(){
     const scientistButton = document.querySelector(".scientists");
     
     scientistButton.addEventListener("click", function(){
-        apiAction.getRequest("https://localhost:44330/api/scientist", scientists => {
+        apiActions.getRequest("https://localhost:44330/api/scientist", scientists => {
             document.querySelector("#app").innerHTML = Scientists(scientists);
         });
     });
