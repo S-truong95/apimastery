@@ -54,7 +54,7 @@ function subjectNav(){
             ).value;
 
             console.log(subject);
-            apiAction.postRequest("https://localhost:44330/api/subject",
+            apiActions.postRequest("https://localhost:44330/api/subject",
             {
                 name: subject,
                 description: subjectDescription,
@@ -71,7 +71,7 @@ function subjectNav(){
             const subjectId = event.target.parentElement.querySelector(".subject_id")
                 .value;
             console.log("delete " + subjectId);
-            apiAction.deleteRequest(`https://localhost:44330/api/subject/${subjectId}`,
+            apiActions.deleteRequest(`https://localhost:44330/api/subject/${subjectId}`,
             subjects =>{
                document.querySelector("#app").innerHTML = Subjects(subjects)
             })
@@ -99,7 +99,7 @@ function fieldNav(){
             ).value;
 
             console.log(field);
-            apiAction.postRequest("https://localhost:44330/api/fields",
+            apiActions.postRequest("https://localhost:44330/api/fields",
             {
                 name: field,
                 description: fieldDescription,
@@ -116,7 +116,7 @@ function fieldNav(){
             const fieldId = event.target.parentElement.querySelector(".field_id")
                 .value;
             console.log("delete " + fieldId);
-            apiAction.deleteRequest(`https://localhost:44330/api/field/${fieldId}`,
+            apiActions.deleteRequest(`https://localhost:44330/api/field/${fieldId}`,
             fields =>{
                document.querySelector("#app").innerHTML = Fields(fields)
             })
@@ -150,7 +150,7 @@ function scientistNav(){
             ).value;
 
             console.log(scientist);
-            apiAction.postRequest("https://localhost:44330/api/scientist",
+            apiActions.postRequest("https://localhost:44330/api/scientist",
             {
                 name: scientist,
                 age: scientistAge,
@@ -169,7 +169,7 @@ function scientistNav(){
             const scientistId = event.target.parentElement.querySelector(".scientist_id")
                 .value;
             console.log("delete " + scientistId);
-            apiAction.deleteRequest(`https://localhost:44330/api/scientist/${scientistId}`,
+            apiActions.deleteRequest(`https://localhost:44330/api/scientist/${scientistId}`,
             scientists =>{
                document.querySelector("#app").innerHTML = Scientists(scientists)
             })
