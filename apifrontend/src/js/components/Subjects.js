@@ -18,5 +18,12 @@ export default function Subjects(subjects) {
       .join("")}
  </ul>
  </section>
+  <section class='add-subject'>
+    <h1>Add Subject</h1>
+    <input class='add-subject_subjectName' type='text' placeholder='Subject Name'>
+    <input class='add-subject_subjectDescription' type='text' placeholder='Description'>
+    <button class='add-subject_submit'id ="button">Submit</button>
+  </section>
+   
 `;
 }    

@@ -42,6 +42,29 @@ function subjectNav(){
             document.querySelector("#app").innerHTML = Subjects(subjects);
         });
     });
+
+    const app = document.querySelector("#app");
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("add-subject_submit")) {
+            const subject = event.target.parentElement.querySelector(
+                ".add-subject_subjectName",
+            ).value;
+            const subjectDescription = event.target.parentElement.querySelector(
+                ".add-subject_subjectDescription",
+            ).value;
+
+            console.log(subject);
+            apiAction.postRequest("https://localhost:44330/api/subject",
+            {
+                name: subject,
+                description: subjectDescription,
+            },
+            subjects =>{
+                console.log(subjects);
+                document.querySelector("#app").innerHTML = Subjects(subjects)
+            })
+        }
+    })
 }
 
 function fieldNav(){
@@ -53,6 +76,28 @@ function fieldNav(){
         });
     });
 
+    const app = document.querySelector("#app");
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("add-field_submit")) {
+            const field = event.target.parentElement.querySelector(
+                ".add-field_fieldName",
+            ).value;
+            const fieldDescription = event.target.parentElement.querySelector(
+                ".add-field_fieldDescription",
+            ).value;
+
+            console.log(field);
+            apiAction.postRequest("https://localhost:44330/afields",
+            {
+                name: field,
+                description: fieldDescription,
+            },
+            fields =>{
+                console.log(fields);
+                document.querySelector("#app").innerHTML = Fields(fields)
+            })
+        }
+    })
 }
 
 function scientistNav(){
@@ -67,7 +112,7 @@ function scientistNav(){
     const app = document.querySelector("#app");
     app.addEventListener("click", function(){
         if(event.target.classList.contains("add-scientist_submit")) {
-            const scientistName = event.target.parentElement.querySelector(
+            const scientist = event.target.parentElement.querySelector(
                 ".add-scientist_scientistName",
             ).value;
             const scientistAge = event.target.parentElement.querySelector(
@@ -83,7 +128,7 @@ function scientistNav(){
             console.log(scientist);
             apiAction.postRequest("https://localhost:44330/api/scientist",
             {
-                name: scientistName,
+                name: scientist,
                 age: scientistAge,
                 birthplace: scientistBirthplace,
                 contribution: scientistContribution
