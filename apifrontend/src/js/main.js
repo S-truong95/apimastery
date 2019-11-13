@@ -87,7 +87,7 @@ function fieldNav(){
             ).value;
 
             console.log(field);
-            apiAction.postRequest("https://localhost:44330/afields",
+            apiAction.postRequest("https://localhost:44330/api/fields",
             {
                 name: field,
                 description: fieldDescription,
