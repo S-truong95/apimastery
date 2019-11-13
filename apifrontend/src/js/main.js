@@ -65,6 +65,18 @@ function subjectNav(){
             })
         }
     })
+
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("delete-subject_submit")) {
+            const subjectId = event.target.parentElement.querySelector(".subject_id")
+                .value;
+            console.log("delete " + subjectId);
+            apiAction.deleteRequest(`https://localhost:44330/api/subject/${subjectId}`,
+            subjects =>{
+               document.querySelector("#app").innerHTML = Subjects(subjects)
+            })
+        }
+    })
 }
 
 function fieldNav(){
@@ -95,6 +107,18 @@ function fieldNav(){
             fields =>{
                 console.log(fields);
                 document.querySelector("#app").innerHTML = Fields(fields)
+            })
+        }
+    })
+
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("delete-field_submit")) {
+            const fieldId = event.target.parentElement.querySelector(".field_id")
+                .value;
+            console.log("delete " + fieldId);
+            apiAction.deleteRequest(`https://localhost:44330/api/field/${fieldId}`,
+            fields =>{
+               document.querySelector("#app").innerHTML = Fields(fields)
             })
         }
     })
@@ -136,6 +160,18 @@ function scientistNav(){
             scientists =>{
                 console.log(scientists);
                 document.querySelector("#app").innerHTML = Scientists(scientists)
+            })
+        }
+    })
+
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("delete-scientist_submit")) {
+            const scientistId = event.target.parentElement.querySelector(".scientist_id")
+                .value;
+            console.log("delete " + scientistId);
+            apiAction.deleteRequest(`https://localhost:44330/api/scientist/${scientistId}`,
+            scientists =>{
+               document.querySelector("#app").innerHTML = Scientists(scientists)
             })
         }
     })
