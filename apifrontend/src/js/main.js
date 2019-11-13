@@ -63,4 +63,35 @@ function scientistNav(){
             document.querySelector("#app").innerHTML = Scientists(scientists);
         });
     });
+
+    const app = document.querySelector("#app");
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("add-scientist_submit")) {
+            const scientistName = event.target.parentElement.querySelector(
+                ".add-scientist_scientistName",
+            ).value;
+            const scientistAge = event.target.parentElement.querySelector(
+                ".add-scientist_scientistAge",
+            ).value;
+            const scientistBirthplace = event.target.parentElement.querySelector(
+                ".add-scientist__scientistBirthplace",
+            ).value;
+            const scientistContribution = event.target.parentElement.querySelector(
+                ".add-scientist__scientistContribution",
+            ).value;
+
+            console.log(scientist);
+            apiAction.postRequest("https://localhost:44330/api/scientist",
+            {
+                name: scientistName,
+                age: scientistAge,
+                birthplace: scientistBirthplace,
+                contribution: scientistContribution
+            },
+            scientists =>{
+                console.log(scientists);
+                document.querySelector("#app").innerHTML = Scientists(scientists)
+            })
+        }
+    })
 }

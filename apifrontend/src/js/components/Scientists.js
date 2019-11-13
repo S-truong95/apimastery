@@ -21,5 +21,13 @@ export default function Scientists(scientists) {
       .join("")}
  </ul>
  </section>
+    <section class='add-scientist'>
+      <h1>Add Scientist!</h1>
+        <input class='add-scientist_scientistName' type='text' placeholder='Scientist Name'>
+        <input class='add-scientist_scientistAge' type='text' placeholder='Age'>
+        <input class='add-scientist_scientistBirthplace' type='text' placeholder='Birthplace'>
+        <input class='add-scientist_scientistContribution' type='text' placeholder='Contribution'>
+        <button class='add-scientist_submit' id ="button">Submit</button>
+    </section>
 `;
 }    
