@@ -65,12 +65,14 @@ function subjectNav(){
             const subjectDescription = event.target.parentElement.querySelector(
                 ".add-subject_subjectDescription",
             ).value;
+            const subjectIMG = "./images/subject.jpg"
 
             console.log(subject);
             apiActions.postRequest("https://localhost:44330/api/subject",
             {
                 name: subject,
                 description: subjectDescription,
+                image: subjectIMG
             },
             subjects =>{
                 console.log(subjects);
@@ -166,6 +168,9 @@ function scientistNav(){
             const scientistContribution = event.target.parentElement.querySelector(
                 ".add-scientist__scientistContribution",
             ).value;
+            const fieldId = event.target.parentElement.querySelector(".field_id")
+            .value;
+            const scientistIMG = "./images/scientist.jpg"
 
             console.log(scientist);
             apiActions.postRequest("https://localhost:44330/api/scientist",
@@ -173,7 +178,9 @@ function scientistNav(){
                 name: scientist,
                 age: scientistAge,
                 birthplace: scientistBirthplace,
-                contribution: scientistContribution
+                contribution: scientistContribution,
+                fieldId: fieldId,
+                image: scientistIMG
             },
             scientists =>{
                 console.log(scientists);
