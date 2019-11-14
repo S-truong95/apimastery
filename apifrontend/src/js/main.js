@@ -5,7 +5,8 @@ import Scientists from "./components/Scientists"
 import Subjects from "./components/Subjects"
 import Fields from "./components/Fields"
 import apiActions from "./api/apiActions"
-import SubjectField from "./components/SubjectFields"
+import SubjectFields from "./components/SubjectFields"
+import FieldScientists from "./components/FieldScientists"
 
 export default () => {
     pageBuild();
@@ -52,7 +53,7 @@ function subjectNav(){
                 apiActions.getRequest(`https://localhost:44330/api/subject/${subjectId}`, 
                 subject => {
                     console.log("Subject: " + subject.name);
-            document.querySelector("#app").innerHTML = SubjectField(subject);
+            document.querySelector("#app").innerHTML = SubjectFields(subject);
             })
         }
     })
@@ -96,14 +97,27 @@ function subjectNav(){
 
 function fieldNav(){
     const fieldButton = document.querySelector(".fields");
-    
+    const app = document.querySelector("#app");
+
     fieldButton.addEventListener("click", function(){
         apiActions.getRequest("https://localhost:44330/api/field", fields => {
             document.querySelector("#app").innerHTML = Fields(fields);
         });
     });
 
-    const app = document.querySelector("#app");
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("fieldIMG")) {
+            const fieldId = event.target.parentElement.querySelector(".field_id")
+                .value;
+                apiActions.getRequest(`https://localhost:44330/api/field/${fieldId}`, 
+                field => {
+                    console.log("Field: " + field.name);
+            document.querySelector("#app").innerHTML = FieldScientists(field);
+            })
+        }
+    })
+
+    
     app.addEventListener("click", function(){
         if(event.target.classList.contains("add-field_submit")) {
             const field = event.target.parentElement.querySelector(
@@ -163,10 +177,10 @@ function scientistNav(){
                 ".add-scientist_scientistAge",
             ).value;
             const scientistBirthplace = event.target.parentElement.querySelector(
-                ".add-scientist__scientistBirthplace",
+                ".add-scientist_scientistBirthplace",
             ).value;
             const scientistContribution = event.target.parentElement.querySelector(
-                ".add-scientist__scientistContribution",
+                ".add-scientist_scientistContribution",
             ).value;
             const fieldId = event.target.parentElement.querySelector(".field_id")
             .value;
