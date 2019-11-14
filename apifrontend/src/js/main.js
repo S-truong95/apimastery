@@ -298,4 +298,52 @@ function scientistNav(){
             })
         }
     })
+
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("edit-scientist_submit")) {
+            const scientistId = event.target.parentElement.querySelector(".scientist_id")
+                .value;
+            console.log("edit " + scientistId);
+            apiActions.getRequest(`https://localhost:44330/api/scientist/${scientistId}`,
+            scientist =>{
+               document.querySelector("#app").innerHTML = EditScientist(scientist)
+            })
+        }
+    })
+
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("update-scientist_submit")) {
+            const scientistId = event.target.parentElement.querySelector(".update-scientist_id")
+                .value;
+            const scientistName = event.target.parentElement.querySelector(".update-scientist_name")
+                .value;
+            const scientistAge = event.target.parentElement.querySelector(".update-scientist_age")
+                .value;
+            const scientistContribution = event.target.parentElement.querySelector(".update-scientist_contribution")
+                .value;
+            const scientistBirthplace = event.target.parentElement.querySelector(".update-scientist_birthplace")
+                .value;
+            const scientistFieldId = event.target.parentElement.querySelector(".update-scientist_fieldid")
+                .value;
+            const scientistImage = event.target.parentElement.querySelector(".update-scientist_image")
+                .value;
+                
+            
+            const scientistData = {
+                id: scientistId,
+                name: scientistName,
+                birthplace: scientistBirthplace,
+                image: scientistImage,
+                fieldId: scientistFieldId,
+                age: scientistAge,
+                contribution: scientistContribution
+            }
+            apiActions.putRequest(`https://localhost:44330/api/scientist/${scientistId}`,
+                scientistData,
+                scientist => {
+                    document.querySelector("#app").innerHTML = Scientists(scientist)
+            }
+            );
+        }
+    })
 }
