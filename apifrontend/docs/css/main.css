@@ -1,0 +1,32 @@
+:root{
+    --primary: green;
+    --dark: black;
+    --light: grey;
+}
+
+html{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: cyan;
+    background-size:cover;
+    background-position: center;
+}
+
+#subjectgrid, #fieldgrid, #scientistgrid{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+#subjectgrid img, #fieldgrid img{
+    height: 150px;
+    width: 250px;
+    border-radius: 25px;
+}
+
+#scientistgrid img{
+    height: 250px;
+    width: 225px;
+    border-radius: 20px;
+}
+

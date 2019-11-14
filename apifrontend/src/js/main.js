@@ -17,7 +17,7 @@ export default () => {
 
 function pageBuild(){
     footer();
-    header();
+    header();      
     sideNav();
     subjectNav();
     fieldNav();
@@ -28,6 +28,7 @@ function header(){
     const header = document.getElementById("header");
     header.innerHTML = Header();
 }
+
 
 function sideNav(){
     const sideNav = document.getElementById("sideNav");
