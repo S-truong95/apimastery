@@ -19,11 +19,5 @@ export default function Fields(fields) {
       .join("")}
  </ul>
  </section>
- <section class='add-field'>
-    <h1>Add Field</h1>
-    <input class='add-field_fieldName' type='text' placeholder='Field Name'>
-    <input class='add-field_fieldDescription' type='text' placeholder='Description'>
-    <button class='add-field_submit'id ="button">Submit</button>
-  </section>
 `;
 }    

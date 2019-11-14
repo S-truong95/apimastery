@@ -5,6 +5,7 @@ import Scientists from "./components/Scientists"
 import Subjects from "./components/Subjects"
 import Fields from "./components/Fields"
 import apiActions from "./api/apiActions"
+import SubjectField from "./components/SubjectFields"
 
 export default () => {
     pageBuild();
@@ -36,6 +37,7 @@ function footer(){
 
 function subjectNav(){
     const subjectButton = document.querySelector(".subjects");
+    const app = document.querySelector("#app");
     
     subjectButton.addEventListener("click", function(){
         apiActions.getRequest("https://localhost:44330/api/subject", subjects => {
@@ -43,7 +45,18 @@ function subjectNav(){
         });
     });
 
-    const app = document.querySelector("#app");
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("subjectIMG")) {
+            const subjectId = event.target.parentElement.querySelector(".subject_id")
+                .value;
+                apiActions.getRequest(`https://localhost:44330/api/subject/${subjectId}`, 
+                subject => {
+                    console.log("Subject: " + subject.name);
+            document.querySelector("#app").innerHTML = SubjectField(subject);
+            })
+        }
+    })
+
     app.addEventListener("click", function(){
         if(event.target.classList.contains("add-subject_submit")) {
             const subject = event.target.parentElement.querySelector(
