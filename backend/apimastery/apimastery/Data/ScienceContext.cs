@@ -28,21 +28,21 @@ namespace apimastery.Data
                     Id = 1,
                     Name = "Biology",
                     Description = "Study of Life",
-                    Image = "/Images/biology.jpg"
+                    Image = "/Images/biology.jpeg"
                 },
                 new Subject()
                 {
                     Id = 2,
                     Name = "Physics",
                     Description = "Study of Nature and Properties of Matter and Energy",
-                    Image = "/Images/physics.jpg"
+                    Image = "/Images/physics.jpeg"
                 },
                 new Subject()
                 {
                     Id = 3,
                     Name = "Chemistry",
                     Description = "Study of Elements and Compounds",
-                    Image = "/Images/chemistry.jpg"
+                    Image = "/Images/chemistry.jpeg"
                 });
 
             modelBuilder.Entity<Field>().HasData(
@@ -51,7 +51,7 @@ namespace apimastery.Data
                     Id = 1,
                     Name ="Botany",
                     Description = "Study of Plants",
-                    Image = "/Images/botany.jpg",
+                    Image = "/Images/botany.jpeg",
                     SubjectId = 1
                 },
                 new Field()
@@ -59,7 +59,7 @@ namespace apimastery.Data
                     Id = 2,
                     Name = "Zoology",
                     Description = "Study of Animals",
-                    Image = "/Images/zoology.jpg",
+                    Image = "/Images/zoology.jpeg",
                     SubjectId = 1
                 },
                 new Field()
@@ -67,7 +67,7 @@ namespace apimastery.Data
                     Id = 3,
                     Name = "Classical",
                     Description = "Refers to Theories of physics that predate modern, more complete, or more widely applicable theories",
-                    Image = "/Images/classicalphys.jpg",
+                    Image = "/Images/classicalphys.jpeg",
                     SubjectId = 2
                 },
                 new Field()
@@ -75,7 +75,7 @@ namespace apimastery.Data
                     Id = 4,
                     Name = "Nuclear",
                     Description = "Study of atomic nuclei and their constituents and interactions",
-                    Image = "/Images/nuclearphys.jpg",
+                    Image = "/Images/nuclearphys.jpeg",
                     SubjectId = 2
                 },
                 new Field()
@@ -83,7 +83,7 @@ namespace apimastery.Data
                     Id = 5,
                     Name = "Organic",
                     Description = "Study of Structures, Properties, and Reactions of Organic Compounds Which Contains Carbon Bonds",
-                    Image = "/Images/organic.jpg",
+                    Image = "/Images/organic.jpeg",
                     SubjectId = 3
                 },
                 new Field()
@@ -91,7 +91,7 @@ namespace apimastery.Data
                     Id = 6,
                     Name = "Physical",
                     Description = "Study of Macroscopic, Atomic, Subatomic, and Particulate Phenomena in Chemical Systems",
-                    Image = "/Images/physicalchem.jpg",
+                    Image = "/Images/physicalchem.jpeg",
                     SubjectId = 3
                 });
 

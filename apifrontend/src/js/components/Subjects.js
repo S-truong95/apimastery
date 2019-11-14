@@ -6,9 +6,9 @@ export default function Subjects(subjects) {
     ${subjects
       .map(subject => {
         return `
-             <li class="select-subject" id="subject">                
-             <img src=${subject.image} class="fieldIMG"></img>   
-             <h3>${subject.name}</h3>
+             <li class="select-subject" id="subject">
+             <img src=${subject.image} class="subjectIMG"></img>            
+                <h3>${subject.name}</h3>
                 <h5>${subject.description}<h5>                      
                 <p><input class="subject_id" type="hidden" value="${subject.id}"></p>
                 <button class="edit-subject_submit">Edit</button>
