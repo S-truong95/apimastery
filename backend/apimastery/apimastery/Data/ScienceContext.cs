@@ -27,19 +27,22 @@ namespace apimastery.Data
                 {
                     Id = 1,
                     Name = "Biology",
-                    Description = "Study of Life"
+                    Description = "Study of Life",
+                    Image = "/Images/biology.jpeg"
                 },
                 new Subject()
                 {
                     Id = 2,
                     Name = "Physics",
-                    Description = "Study of Nature and Properties of Matter and Energy"
+                    Description = "Study of Nature and Properties of Matter and Energy",
+                    Image = "/Images/physics.jpeg"
                 },
                 new Subject()
                 {
                     Id = 3,
                     Name = "Chemistry",
-                    Description = "Study of Elements and Compounds"
+                    Description = "Study of Elements and Compounds",
+                    Image = "/Images/chemistry.jpeg"
                 });
 
             modelBuilder.Entity<Field>().HasData(
@@ -48,7 +51,7 @@ namespace apimastery.Data
                     Id = 1,
                     Name ="Botany",
                     Description = "Study of Plants",
-                    Image = "",
+                    Image = "/Images/botany.jpeg",
                     SubjectId = 1
                 },
                 new Field()
@@ -56,7 +59,7 @@ namespace apimastery.Data
                     Id = 2,
                     Name = "Zoology",
                     Description = "Study of Animals",
-                    Image = "",
+                    Image = "/Images/zoology.jpeg",
                     SubjectId = 1
                 },
                 new Field()
@@ -64,7 +67,7 @@ namespace apimastery.Data
                     Id = 3,
                     Name = "Classical",
                     Description = "Refers to Theories of physics that predate modern, more complete, or more widely applicable theories",
-                    Image = "",
+                    Image = "/Images/classicalphys.jpeg",
                     SubjectId = 2
                 },
                 new Field()
@@ -72,7 +75,7 @@ namespace apimastery.Data
                     Id = 4,
                     Name = "Nuclear",
                     Description = "Study of atomic nuclei and their constituents and interactions",
-                    Image = "",
+                    Image = "/Images/nuclearphys.jpeg",
                     SubjectId = 2
                 },
                 new Field()
@@ -80,7 +83,7 @@ namespace apimastery.Data
                     Id = 5,
                     Name = "Organic",
                     Description = "Study of Structures, Properties, and Reactions of Organic Compounds Which Contains Carbon Bonds",
-                    Image = "",
+                    Image = "/Images/organic.jpeg",
                     SubjectId = 3
                 },
                 new Field()
@@ -88,7 +91,7 @@ namespace apimastery.Data
                     Id = 6,
                     Name = "Physical",
                     Description = "Study of Macroscopic, Atomic, Subatomic, and Particulate Phenomena in Chemical Systems",
-                    Image = "",
+                    Image = "/Images/physicalchem.jpeg",
                     SubjectId = 3
                 });
 
@@ -101,6 +104,7 @@ namespace apimastery.Data
                     Age = 62,
                     Birthplace = "Austria",
                     Contribution = "Creating the science of Genetics",
+                    Image = "/Images/mendel.jpg",
                     FieldId = 1
                 },
 
@@ -111,6 +115,7 @@ namespace apimastery.Data
                     Age = 73,
                     Birthplace = "England",
                     Contribution = "On the Origin of Species",
+                    Image = "/Images/darwin.jpg",
                     FieldId = 2
                 },
 
@@ -121,6 +126,7 @@ namespace apimastery.Data
                     Age = 75,
                     Birthplace = "England",
                     Contribution = "Faraday's Law of Induction",
+                    Image = "/Images/faraday.jpg",
                     FieldId = 3
                 },
 
@@ -131,6 +137,7 @@ namespace apimastery.Data
                     Age = 76,
                     Birthplace = "Germany",
                     Contribution = "General relativity",
+                    Image = "/Images/einstein.jpg",
                     FieldId = 4                
                 },
 
@@ -141,6 +148,7 @@ namespace apimastery.Data
                     Age = 62,
                     Birthplace = "USA",
                     Contribution = "Molecular Structure determination",
+                    Image = "/Images/woodward.jpg",
                     FieldId = 5              
                
                 },
@@ -152,6 +160,7 @@ namespace apimastery.Data
                     Age = 86,
                     Birthplace = "Switzerland",
                     Contribution = "NMR Spectroscopy",
+                    Image = "/Images/ernst.jpg",
                     FieldId = 6
                 }
 

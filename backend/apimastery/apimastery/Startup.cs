@@ -34,7 +34,8 @@ namespace apimastery
                        .AllowAnyMethod()
                        .AllowAnyHeader();
             }));
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                       .AddJsonOptions(x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddDbContext<ScienceContext>();
             services.AddScoped<IRepository<Subject>, SubjectRepository>();
             services.AddScoped<IRepository<Scientist>, ScientistRepository>();
@@ -55,6 +56,7 @@ namespace apimastery
             app.UseCors("MyPolicy");
             app.UseHttpsRedirection();
             app.UseMvc();
+            app.UseStaticFiles();
         }
     }
 }
