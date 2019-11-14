@@ -27,19 +27,22 @@ namespace apimastery.Data
                 {
                     Id = 1,
                     Name = "Biology",
-                    Description = "Study of Life"
+                    Description = "Study of Life",
+                    Image = ""
                 },
                 new Subject()
                 {
                     Id = 2,
                     Name = "Physics",
-                    Description = "Study of Nature and Properties of Matter and Energy"
+                    Description = "Study of Nature and Properties of Matter and Energy",
+                    Image = ""
                 },
                 new Subject()
                 {
                     Id = 3,
                     Name = "Chemistry",
                     Description = "Study of Elements and Compounds"
+                    Image = ""
                 });
 
             modelBuilder.Entity<Field>().HasData(
