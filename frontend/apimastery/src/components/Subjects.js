@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 
 class Subjects extends Component {
+    constructor(props){
+        super(props)
+    }
     render() {
-        const {subject, id} = this.props;
+        
         return (
             <div className="subject-container">
                 <div className="subject-image">
                     <div className="subject-info">
-                        {subject.name},
-                         {subject.image},
-                        {subject.description}
+                        {this.props.name},
+                         {this.props.image},
+                        {this.props.description}
                     </div>
                 </div>
             </div> 
