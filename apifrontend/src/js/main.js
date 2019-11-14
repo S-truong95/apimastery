@@ -10,6 +10,7 @@ import FieldScientists from "./components/FieldScientists"
 import EditSubject from "./components/EditSubject"
 import EditField from "./components/EditField"
 import EditScientist from "./components/EditScientist"
+import HomeNav from "./components/HomeNav"
 
 export default () => {
     pageBuild();
