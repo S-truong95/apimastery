@@ -91,7 +91,7 @@ namespace apimastery.Data
                     Id = 6,
                     Name = "Physical",
                     Description = "Study of Macroscopic, Atomic, Subatomic, and Particulate Phenomena in Chemical Systems",
-                    Image = "Images/physicalchem.jpg",
+                    Image = "/Images/physicalchem.jpg",
                     SubjectId = 3
                 });
 
