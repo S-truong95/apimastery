@@ -110,12 +110,17 @@ function fieldNav(){
             const fieldDescription = event.target.parentElement.querySelector(
                 ".add-field_fieldDescription",
             ).value;
+            const subjectId = event.target.parentElement.querySelector(".subject_id")
+            .value;
+            const fieldIMG = "./images/field.jpg"
 
             console.log(field);
-            apiActions.postRequest("https://localhost:44330/api/fields",
+            apiActions.postRequest("https://localhost:44330/api/field",
             {
                 name: field,
                 description: fieldDescription,
+                subjectId: subjectId,
+                image: fieldIMG
             },
             fields =>{
                 console.log(fields);
