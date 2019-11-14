@@ -7,6 +7,9 @@ import Fields from "./components/Fields"
 import apiActions from "./api/apiActions"
 import SubjectFields from "./components/SubjectFields"
 import FieldScientists from "./components/FieldScientists"
+import EditSubject from "./components/EditSubject"
+import EditField from "./components/EditField"
+import EditScientist from "./components/EditScientist"
 
 export default () => {
     pageBuild();
@@ -93,6 +96,44 @@ function subjectNav(){
             })
         }
     })
+
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("edit-subject_submit")) {
+            const subjectId = event.target.parentElement.querySelector(".subject_id")
+                .value;
+            console.log("edit " + subjectId);
+            apiActions.getRequest(`https://localhost:44330/api/subject/${subjectId}`,
+            subject =>{
+               document.querySelector("#app").innerHTML = EditSubject(subject)
+            })
+        }
+    })
+
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("update-subject_submit")) {
+            const subjectId = event.target.parentElement.querySelector(".update-subject_id")
+                .value;
+            const subjectImage = event.target.parentElement.querySelector(".update-subject_image")
+                .value;
+            const subjectName = event.target.parentElement.querySelector(".update-subject_name")
+                .value;
+            const subjectDescription = event.target.parentElement.querySelector(".update-subject_description")
+                .value;
+            
+            const subjectData = {
+                id: subjectId,
+                name: subjectName,
+                description: subjectDescription,
+                image: subjectImage
+            }
+            apiActions.putRequest(`https://localhost:44330/api/subject/${subjectId}`,
+            subjectData,
+            subject => {
+                document.querySelector("#app").innerHTML = Subjects(subject)
+            }
+            );
+        }
+    })
 }
 
 function fieldNav(){
@@ -154,6 +195,49 @@ function fieldNav(){
             fields =>{
                document.querySelector("#app").innerHTML = Fields(fields)
             })
+        }
+    })
+
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("edit-field_submit")) {
+            const fieldId = event.target.parentElement.querySelector(".field_id")
+                .value;
+            console.log("edit " + fieldId);
+            apiActions.getRequest(`https://localhost:44330/api/field/${fieldId}`,
+            field =>{
+               document.querySelector("#app").innerHTML = EditField(field)
+            })
+        }
+    })
+
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("update-field_submit")) {
+            const fieldId = event.target.parentElement.querySelector(".update-field_id")
+                .value;
+            const fieldName = event.target.parentElement.querySelector(".update-field_name")
+                .value;
+            const fieldDescription = event.target.parentElement.querySelector(".update-field_description")
+                .value;
+            const fieldSubjectId = event.target.parentElement.querySelector(".update-field_subjectid")
+                .value;
+            const fieldImage = event.target.parentElement.querySelector(".update-field_image")
+                .value;
+                
+            
+            const fieldData = {
+                id: fieldId,
+                name: fieldName,
+                description: fieldDescription,
+                image: fieldImage,
+                subjectId: fieldSubjectId
+
+            }
+            apiActions.putRequest(`https://localhost:44330/api/field/${fieldId}`,
+                fieldData,
+                field => {
+                    document.querySelector("#app").innerHTML = Fields(field)
+            }
+            );
         }
     })
 }
