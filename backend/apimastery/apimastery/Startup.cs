@@ -55,6 +55,7 @@ namespace apimastery
             app.UseCors("MyPolicy");
             app.UseHttpsRedirection();
             app.UseMvc();
+            app.UseStaticFiles();
         }
     }
 }

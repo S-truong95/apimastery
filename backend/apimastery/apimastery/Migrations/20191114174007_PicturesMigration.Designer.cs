@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using apimastery.Data;
 
 namespace apimastery.Migrations
 {
     [DbContext(typeof(ScienceContext))]
-    partial class ScienceContextModelSnapshot : ModelSnapshot
+    [Migration("20191114174007_PicturesMigration")]
+    partial class PicturesMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,7 +46,7 @@ namespace apimastery.Migrations
                         new { Id = 3, Description = "Refers to Theories of physics that predate modern, more complete, or more widely applicable theories", Image = "/Images/classicalphys.jpg", Name = "Classical", SubjectId = 2 },
                         new { Id = 4, Description = "Study of atomic nuclei and their constituents and interactions", Image = "/Images/nuclearphys.jpg", Name = "Nuclear", SubjectId = 2 },
                         new { Id = 5, Description = "Study of Structures, Properties, and Reactions of Organic Compounds Which Contains Carbon Bonds", Image = "/Images/organic.jpg", Name = "Organic", SubjectId = 3 },
-                        new { Id = 6, Description = "Study of Macroscopic, Atomic, Subatomic, and Particulate Phenomena in Chemical Systems", Image = "/Images/physicalchem.jpg", Name = "Physical", SubjectId = 3 }
+                        new { Id = 6, Description = "Study of Macroscopic, Atomic, Subatomic, and Particulate Phenomena in Chemical Systems", Image = "Images/physicalchem.jpg", Name = "Physical", SubjectId = 3 }
                     );
                 });
 
