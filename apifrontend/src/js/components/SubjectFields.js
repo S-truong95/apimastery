@@ -25,11 +25,7 @@ export default function SubjectField(subject){
                     </img>
                     <li>
                         <h3>${field.name}</h3>
-                        <h4>${field.description}</h4>
                     </li>
-                    <input class="field_id" type="hidden" value="${field.id}">
-                    <button class="edit-field_submit" id="button">Edit</button>
-                    <button class="delete-field_submit"id="button">Delete</button>
                 </article>
                 
               </div>    

@@ -25,13 +25,7 @@ export default function FieldScientists(field) {
                     </img>
                     <li>
                         <h3>${scientist.name}</h3>
-                        <h4>${scientist.age}</h4>
-                        <h4>${scientist.birthplace}</h4>
-                        <h4>${scientist.contribution}</h4>
                     </li>
-                    <input class="scientist_id" type="hidden" value="${scientist.id}">
-                    <button class="edit-scientist_submit" id="button">Edit</button>
-                    <button class="delete-scientist_submit"id="button">Delete</button>
                 </article>
                 
               </div>    
