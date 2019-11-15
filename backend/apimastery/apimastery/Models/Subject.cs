@@ -18,5 +18,11 @@ namespace apimastery.Models
         {
 
         }
+
+        public Subject(int id, string name)
+        {
+            Id = id;
+            Name = name;
+        }
     }
 }
