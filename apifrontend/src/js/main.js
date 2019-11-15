@@ -11,6 +11,7 @@ import EditSubject from "./components/EditSubject"
 import EditField from "./components/EditField"
 import EditScientist from "./components/EditScientist"
 import HomeNav from "./components/HomeNav"
+import IndividualScientist from "./components/IndividualScientist"
 
 export default () => {
     pageBuild();
@@ -246,14 +247,26 @@ function fieldNav(){
 
 function scientistNav(){
     const scientistButton = document.querySelector(".scientists");
-    
+    const app = document.querySelector("#app");
+
     scientistButton.addEventListener("click", function(){
         apiActions.getRequest("https://localhost:44330/api/scientist", scientists => {
             document.querySelector("#app").innerHTML = Scientists(scientists);
         });
     });
 
-    const app = document.querySelector("#app");
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("scientistIMG")) {
+            const scientistId = event.target.parentElement.querySelector(".scientist_id")
+                .value;
+                apiActions.getRequest(`https://localhost:44330/api/scientist/${scientistId}`, 
+                scientist => {
+                    console.log("Scientist: " + scientist.name);
+            document.querySelector("#app").innerHTML = IndividualScientist(scientist);
+            })
+        }
+    })
+
     app.addEventListener("click", function(){
         if(event.target.classList.contains("add-scientist_submit")) {
             const scientist = event.target.parentElement.querySelector(
