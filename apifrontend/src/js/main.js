@@ -24,6 +24,7 @@ function pageBuild(){
     subjectNav();
     fieldNav();
     scientistNav();
+    homeNav();
 }
 
 function header(){
@@ -31,15 +32,28 @@ function header(){
     header.innerHTML = Header();
 }
 
-
 function sideNav(){
     const sideNav = document.getElementById("sideNav");
     sideNav.innerHTML = SideNav();
+
+    sideNav.addEventListener("click", function(){
+        if(event.target.classList.contains("home")){
+            const homeNav = document.querySelector("#app");
+            homeNav.innerHTML = HomeNav();
+        }
+    })    
 }
 
 function footer(){
     const footer = document.getElementById("footer");
     footer.innerHTML = Footer();
+}
+
+function homeNav(){
+    const homeNav = document.getElementById("app");
+    homeNav.innerHTML = HomeNav();
+
+    
 }
 
 function subjectNav(){
