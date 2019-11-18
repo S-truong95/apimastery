@@ -21,5 +21,11 @@ namespace apimastery.Models
 
         }
 
+        public Field(int id, string name)
+        {
+            Id = id;
+            Name = name;
+        }
+
     }
 }

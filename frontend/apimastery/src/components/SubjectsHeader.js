@@ -5,7 +5,7 @@ class SubjectsHeader extends Component {
     constructor(props){
         super(props);
         this.state = {
-            name: [],
+            subjects: [],
             fetched: false,
             loading: false
         };
@@ -16,11 +16,12 @@ class SubjectsHeader extends Component {
             loading: true
         });
 
-        fetched("https://44330/api/subject")
+        fetch("https://localhost:44330/api/subject?limit=3")
         .then(res =>res.json())
         .then(response => {
+            console.log(response)
             this.setState({
-                name: response.results,
+                subjects: response.results,
                 loading: true,
                 fetched: true
             });
@@ -30,15 +31,15 @@ class SubjectsHeader extends Component {
     }
     
     render() {
-        const {fetched, loading, name } =this.state;
+        const {fetched, loading, subjects } =this.state;
 
         let content;
 
         if (fetched){
             content = (
                 <div className="subject-list">
-                    {name.map((subject, index) => (
-                        <Subjects key={subject.name} id={index + 1} subject={subject} />
+                    {subjects.map((subject) => (
+                    d<Subjects name={subject.name}  description={subject.description} />
                     ))}                   
                 </div>
             );
