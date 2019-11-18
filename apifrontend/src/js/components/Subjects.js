@@ -17,7 +17,7 @@ export default function Subjects(subjects) {
       .join("")}
  
   <section class='add-subject'>
-    <h2>Add Subject</h2>
+    <h2>Add A Subject!</h2>
     <input class='add-subject_subjectName' type='text' placeholder='Subject Name'>
     <input class='add-subject_subjectDescription' type='text' placeholder='Description'>
     <button class='add-subject_submit'id ="button">Submit</button>

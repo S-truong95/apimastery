@@ -22,18 +22,18 @@ html{
     align-items: center;
     color:white;
     background-color: teal;
-    max-width:530px;
+    max-width:400px;
     padding-left:4px;
     padding-top:3px;
     padding-bottom:15px;
     border-radius:10px;
-    margin-left: 250px;
+    margin-left: 330px;
     
 }
 
 .homeIMG{
-    height:300px;
-    width:500px;
+    height:200px;
+    width:300px;
     border: 1px solid white;
     border-radius: 10px;
 }
