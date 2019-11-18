@@ -1,24 +1,21 @@
 export default function Subjects(subjects) {
     return `
 
-<section id="subjectgrid">    
-<ul> 
     ${subjects
       .map(subject => {
         return `
-             <li class="select-subject" id="subject">
+             <section class="subjectgrid">
              <img src=${subject.image} class="subjectIMG"></img>            
-                <h3>${subject.name}</h3>
-                <h5>${subject.description}<h5>                      
+                <h4>Subject: ${subject.name}</h4>
+                <h4>Description: ${subject.description}<h4>                      
                 <p><input class="subject_id" type="hidden" value="${subject.id}"></p>
                 <button class="edit-subject_submit">Edit</button>
                 <button class="delete-subject_submit">Delete</button>
-             </li>
+             </section>
         `;
       })
       .join("")}
- </ul>
- </section>
+ 
   <section class='add-subject'>
     <h2>Add Subject</h2>
     <input class='add-subject_subjectName' type='text' placeholder='Subject Name'>

@@ -1,8 +1,3 @@
-:root{
-    --primary: green;
-    --dark: black;
-    --light: grey;
-}
 
 html{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -10,6 +5,16 @@ html{
     background-size:cover;
     background-position: center;
     align-content: center;
+}
+
+
+#header{   
+    color: white;
+    text-align: center;
+    background-color: teal;
+    border-radius: 20px;    
+    margin-top: 0;
+    
 }
 
 #homePage{
@@ -26,48 +31,84 @@ html{
     
 }
 
-h1{   
-    color: white;
-    text-align: center;
-    background-color: teal;
-    border-radius: 20px;
-    padding: 0;
-    
-}
-
-
-.sidenav{
-    display: grid;
-    grid-gap: 20px;
-    
-}
-
-
 .homeIMG{
     height:300px;
     width:500px;
-    border-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
 }
 
-#subjectgrid, #fieldgrid, #scientistgrid{
+.subjectgrid, .fieldgrid{
     display: grid;
     grid-gap: 15px;
+    padding: 1rem;
+    margin: 1.1rem ;
+    background-color: rgb(23, 143, 143);
+    border-radius:20px;
     grid-template-columns: repeat(4, 1fr);
     text-align: center;
+    
 }
 
-#subjectgrid img, #fieldgrid img{
+.scientistgrid{
+    display: grid;
+    grid-gap: 10px;
+    padding: 0.5rem;
+    margin: 1.1rem ;
+    background-color: rgb(23, 143, 143);
+    border-radius:20px;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+}
+
+.subjectgrid img, .fieldgrid img{
     height: 150px;
     width: 250px;
     border-radius: 25px;
+    border: 2px solid black;
 }
 
-#scientistgrid img{
-    height: 250px;
-    width: 225px;
+.scientistgrid img{
+    height: 200px;
+    width: 175px;
     border-radius: 20px;
+    border: 2px solid black;
 }
 
+
+.edit-subject_submit, .edit-field_submit{
+    width:50px;
+    display: inline-block;
+    color: blueviolet;
+    background: white;    
+    border: 1px solid blueviolet;    
+}
+
+ .edit-scientist_submit{
+    width:50px;
+    height:25px;
+    display: inline-block;
+    color: blueviolet;
+    background: white;    
+    border: 2px solid blueviolet; 
+ }
+
+ .delete-subject_submit,.delete-field_submit{
+    width:50px;
+    display: inline-block;
+    color: red;
+    background: white;    
+    border: 1px solid red;  
+ }
+
+ .delete-scientist_submit{
+    width:50px;
+    height:25px;
+    display: inline-block;
+    color: red;
+    background: white;    
+    border: 2px solid red;
+ }
 footer{
     background: rgb(4, 73, 73);
     color: white;    
