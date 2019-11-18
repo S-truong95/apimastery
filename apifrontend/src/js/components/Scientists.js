@@ -22,7 +22,7 @@ export default function Scientists(scientists) {
  </ul>
  </section>
     <section class='add-scientist'>
-      <h1>Add Scientist!</h1>
+      <h2>Add Scientist!</h2>
         <input class='add-scientist_scientistName' type='text' placeholder='Scientist Name'>
         <input class='add-scientist_scientistAge' type='text' placeholder='Age'>
         <input class='add-scientist_scientistBirthplace' type='text' placeholder='Birthplace'>

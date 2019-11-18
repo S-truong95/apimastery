@@ -1,7 +1,9 @@
 export default function HomeNav(){
-    return`
-    <h1>Welcome Fellow Nerds</h1>
-    <h3>Come in and see the realms of science</h3>
-    <img class="homeIMG" src="./images/atom.jpg" />
+    return`   
+    <div id="homePage">
+    <h3>Welcome Fellow Nerds</h3>
+    <h4>Come in and see the realms of science</h4>
+    <img class="homeIMG" src="./images/atom.jpg" />   
+    </div>
     `
 }

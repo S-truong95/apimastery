@@ -6,9 +6,47 @@
 
 html{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: cyan;
+    background-image:linear-gradient(rgba(21, 53, 53, 0.2),rgb(0, 0, 0, 0.2)) ,url("/images/background.jpg");
     background-size:cover;
     background-position: center;
+    align-content: center;
+}
+
+#homePage{
+    text-align: center;;
+    align-items: center;
+    color:white;
+    background-color: teal;
+    max-width:530px;
+    padding-left:4px;
+    padding-top:3px;
+    padding-bottom:15px;
+    border-radius:10px;
+    margin-left: 250px;
+    
+}
+
+h1{   
+    color: white;
+    text-align: center;
+    background-color: teal;
+    border-radius: 20px;
+    padding: 0;
+    
+}
+
+
+.sidenav{
+    display: grid;
+    grid-gap: 20px;
+    
+}
+
+
+.homeIMG{
+    height:300px;
+    width:500px;
+    border-color: black;
 }
 
 #subjectgrid, #fieldgrid, #scientistgrid{
@@ -28,5 +66,14 @@ html{
     height: 250px;
     width: 225px;
     border-radius: 20px;
+}
+
+footer{
+    background: rgb(4, 73, 73);
+    color: white;    
+    text-align: center;   
+    border-radius: 20px;
+    margin: 1rem auto;
+    padding: 0.5rem;
 }
 

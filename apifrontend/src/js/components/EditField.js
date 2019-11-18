@@ -1,7 +1,7 @@
 export default function Field(field){
     return`
         <section class='main-content_field'>
-            <h1>${field.name}</h1>
+            <h2>${field.name}</h2>
         </section>
         <section class='update-field'>
             <input class="update-field_name" value="${field.name}">

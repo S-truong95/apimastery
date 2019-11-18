@@ -1,7 +1,7 @@
 export default function Scientist(scientist){
     return`
         <section class='main-content_scientist'>
-            <h1>${scientist.name}</h1>
+            <h2>${scientist.name}</h2>
         </section>
         <section class='update-scientist'>
             <input class="update-scientist_name" value="${scientist.name}">
