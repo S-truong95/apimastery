@@ -15,10 +15,7 @@ namespace apimastery.Repositories
         {
             this.db = db;
         }
-        //public int Count()
-        //{
-        //    return db.Set<T>().Count();
-        //}
+        
         public void Create(T entity)
         {
             db.Set<T>().Add(entity);
@@ -35,9 +32,7 @@ namespace apimastery.Repositories
         }
         public void Save()
         {
-            // Save will persist all modifications to entities to the database.
-            // Theres no great way to test this, and really we would be testing Microsoft's
-            // code and not ours.  Untested code is the exception, not the norm.
+            
             db.SaveChanges();
         }
         public IEnumerable<T> GetAll()
