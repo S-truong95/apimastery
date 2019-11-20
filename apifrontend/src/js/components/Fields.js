@@ -1,7 +1,7 @@
 export default function Fields(fields) {
     return `
     <p id="instructions">Click on Images for Details</p>
-
+    <section id="wrapper3"> 
     ${fields
       .map(field => {
         return `
@@ -15,6 +15,7 @@ export default function Fields(fields) {
         `;
       })
       .join("")}
+      </section>
  
 `;
 }    

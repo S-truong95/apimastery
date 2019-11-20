@@ -1,6 +1,7 @@
 export default function Subjects(subjects) {
     return `
-  <p id="instructions">Click on the Image to display related Fields</p>
+  <p id="instructions">Click on the Image to display related Fields</p> 
+  <section id="wrapper3"> 
     ${subjects
       .map(subject => {
         return `
@@ -14,6 +15,7 @@ export default function Subjects(subjects) {
         `;
       })
       .join("")}
+      </section>
  
   <section class='add-subject'>
     <h2>Add A Subject!</h2>

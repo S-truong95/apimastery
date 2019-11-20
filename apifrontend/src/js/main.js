@@ -37,7 +37,7 @@ function sideNav(){
     sideNav.innerHTML = SideNav();
 
     sideNav.addEventListener("click", function(){
-        if(event.target.classList.contains("home")){
+        if(event.target.classList.contains(".homeButton")){
             const homeNav = document.querySelector("#app");
             homeNav.innerHTML = HomeNav();
         }
@@ -57,7 +57,7 @@ function homeNav(){
 }
 
 function subjectNav(){
-    const subjectButton = document.querySelector(".subjects");
+    const subjectButton = document.querySelector(".subjectButton");
     const app = document.querySelector("#app");
     
     subjectButton.addEventListener("click", function(){
@@ -154,7 +154,7 @@ function subjectNav(){
 }
 
 function fieldNav(){
-    const fieldButton = document.querySelector(".fields");
+    const fieldButton = document.querySelector(".fieldsButton");
     const app = document.querySelector("#app");
 
     fieldButton.addEventListener("click", function(){
@@ -260,7 +260,7 @@ function fieldNav(){
 }
 
 function scientistNav(){
-    const scientistButton = document.querySelector(".scientists");
+    const scientistButton = document.querySelector(".scientistsButton");
     const app = document.querySelector("#app");
 
     scientistButton.addEventListener("click", function(){
