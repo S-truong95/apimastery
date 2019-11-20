@@ -1,7 +1,7 @@
 
 html{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image:linear-gradient(rgba(21, 53, 53, 0.2),rgb(0, 0, 0, 0.2)) ,url("/images/background.jpg");
+    background-image:linear-gradient(rgba(133, 145, 145, 0.7),rgba(133, 145, 145, 0.7)) ,url("/images/background.jpg");
     background-size:cover;
     background-position: center;
     align-content: center;
@@ -37,6 +37,11 @@ html{
     border: 1px solid white;
     border-radius: 10px;
 }
+#instructions{
+    color: white;
+    text-align: center;
+
+}
 
 .subjectgrid, .fieldgrid{
     display: grid;
@@ -45,43 +50,68 @@ html{
     margin: 1.1rem ;
     background-color: rgb(23, 143, 143);
     border-radius:20px;
-    grid-template-columns: repeat(4, 1fr);
-    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;    
+    align-items:center;
     
 }
 
-.scientistgrid{
+#wrapper{
     display: grid;
     grid-gap: 10px;
     padding: 0.5rem;
-    margin: 1.1rem ;
-    background-color: rgb(23, 143, 143);
+    margin: 1.1rem ;     
     border-radius:20px;
-    grid-template-columns: repeat(5, 1fr);
-    align-items: center;
+    grid-template-columns: repeat(3, 1fr); 
+    list-style: none; 
+    align-content:center;
+    text-align: center;  
+    align-items:center;
 }
 
-.subjectgrid img, .fieldgrid img{
+ 
+#wrapper2{
+    display: grid;
+    grid-gap: 50px;
+    padding: 0.5rem;
+    margin: 1.1rem ;    
+    border-radius:20px;
+    grid-template-columns: repeat(3, 1fr); 
+    list-style: none; 
+    align-content: center;    
+}
+
+
+.subjectgrid img, .fieldgrid img, .subjectIMG, .fieldIMG, .fieldDetails img{
     height: 150px;
     width: 250px;
     border-radius: 25px;
     border: 2px solid black;
 }
 
-.scientistgrid img{
+.scientistgrid img, .scientistDetails img, .scientistIMG{
     height: 200px;
     width: 175px;
     border-radius: 20px;
     border: 2px solid black;
 }
 
+.add-subject_submit, .add-field_submit, .add-scientist_submit{
+    width:60px;
+    display: inline-block;
+    color: rgb(11, 165, 144);
+    background: white;    
+    border: 1px solid rgb(11, 165, 144);  
+    border-radius:2.5rem;  
+}
 
 .edit-subject_submit, .edit-field_submit{
     width:50px;
     display: inline-block;
     color: blueviolet;
     background: white;    
-    border: 1px solid blueviolet;    
+    border: 1px solid blueviolet;  
+    border-radius:2.5rem;    
 }
 
  .edit-scientist_submit{
@@ -91,6 +121,7 @@ html{
     color: blueviolet;
     background: white;    
     border: 2px solid blueviolet; 
+    border-radius:2.5rem;  
  }
 
  .delete-subject_submit,.delete-field_submit{
@@ -98,7 +129,8 @@ html{
     display: inline-block;
     color: red;
     background: white;    
-    border: 1px solid red;  
+    border: 1px solid red;
+    border-radius:2.5rem;  
  }
 
  .delete-scientist_submit{
@@ -108,8 +140,18 @@ html{
     color: red;
     background: white;    
     border: 2px solid red;
+    border-radius:2.5rem;  
  }
-footer{
+
+ #detail{
+     margin-left: 1.5rem
+ }
+
+ #detail ul{
+     list-style:none;
+ }
+
+ footer{
     background: rgb(4, 73, 73);
     color: white;    
     text-align: center;   
