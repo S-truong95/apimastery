@@ -37,11 +37,20 @@ function sideNav(){
     sideNav.innerHTML = SideNav();
 
     sideNav.addEventListener("click", function(){
-        if(event.target.classList.contains(".homeButton")){
+        if(event.target.classList.contains(".home")){
             const homeNav = document.querySelector("#app");
             homeNav.innerHTML = HomeNav();
         }
     })    
+}
+
+function homeNav(){
+    const landing = document.querySelector("#app");
+    landing.innerHTML = HomeNav()
+    const homeButton = document.querySelector(".homeButton");
+    homeButton.addEventListener("click", function() {
+    document.querySelector("#app").innerHTML = HomeNav();
+    })
 }
 
 function footer(){
@@ -49,12 +58,6 @@ function footer(){
     footer.innerHTML = Footer();
 }
 
-function homeNav(){
-    const homeNav = document.getElementById("app");
-    homeNav.innerHTML = HomeNav();
-
-    
-}
 
 function subjectNav(){
     const subjectButton = document.querySelector(".subjectButton");
