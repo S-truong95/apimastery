@@ -66,7 +66,7 @@ namespace apimastery.Data
                 {
                     Id = 3,
                     Name = "Classical",
-                    Description = "Refers to Theories of physics that predate modern, more complete, or more widely applicable theories",
+                    Description = "Refers to theories of physics that predate modern, more complete, or widely applicable theories",
                     Image = "/Images/classicalphys.jpeg",
                     SubjectId = 2
                 },
@@ -74,7 +74,7 @@ namespace apimastery.Data
                 {
                     Id = 4,
                     Name = "Nuclear",
-                    Description = "Study of atomic nuclei and their constituents and interactions",
+                    Description = "Refers to the study of atomic nuclei and their constituents and interactions",
                     Image = "/Images/nuclearphys.jpeg",
                     SubjectId = 2
                 },
