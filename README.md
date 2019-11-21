@@ -1,6 +1,6 @@
 # apimastery
 
-Welcome Science Fellow Science Nerds!
+Welcome Fellow Science Nerds!
 
 *Here's how to get started...*
 <br>1. Browse our collection of science subjects, fields and scientists as long as you like, or exit at any time by closing the window from
