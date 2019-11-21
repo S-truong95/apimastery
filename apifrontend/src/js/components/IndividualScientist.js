@@ -2,7 +2,7 @@ export default function IndividualScientist(scientist) {
     return `
     
     <div id="detail">
-    <h3>Scientist Details</h3>
+    <h3>Scientist Details</h3>    
     <img src=${scientist.image} class='scientistIMG'></img>
     <input class="field_id" type="hidden" value="${scientist.id}">       
     
@@ -13,6 +13,8 @@ export default function IndividualScientist(scientist) {
             <p><input class="scientist_id" type="hidden" value="${scientist.id}"></p>
             <button class="edit-scientist_submit">Edit</button>
             <button class="delete-scientist_submit">Delete</button>
+    </div>
+    
         
     
     `;
