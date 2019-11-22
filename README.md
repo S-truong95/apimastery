@@ -8,9 +8,9 @@ the top right navigation bar.
 
 *Here's how to interact with our site...*
 <br>2. Use the navigation buttons at the top of the page to view **Subjects**, **Fields**, or **Scientists**.
-<br>3. When on the SUBJECTS page, click on the image to display all associated FIELDS. At the bottom of the page, 
+<br>3. When on the SUBJECTS page, click on the image to display all associated FIELDS. At the bottom of the rendered page, 
 you have the option to add a new FIELD that will be assigned to the selected SUBJECT collections.
-<br>4. When on the FIELDS page, clik on the image to display all associated SCIENTISTS. At the bottom of the page,
+<br>4. When on the FIELDS page, clik on the image to display all associated SCIENTISTS. At the bottom of the rendered page,
 you have the option to add a new SCIENTIST that will be assigned to the selected FIELD collections.
 <br>5. When on the SCIENTISTS page, click on the image to display details about the scientist.
 <br>6. Use the EDIT and DELETE buttons to update and remove any newly added entry.
